@@ -79,8 +79,8 @@ void set_numbers(long n) {
  
 // setup()　は，最初に一度だけ実行される
 void setup() {
-//Serial.begin(9600);
-//Serial.println("DEBUG DEBUG DEBUG");
+Serial.begin(9600);
+Serial.println("DEBUG DEBUG DEBUG");
   for (int i = 0; i < number_of_anode_pins; i++) {
     pinMode(anode_pins[i], OUTPUT);  // anode_pinsを出力モードに設定する
   }
@@ -106,7 +106,7 @@ void loop () {
   }
 
   // min01 count down
-  if(sec01 <= 0 && sec10 <= 0 && min01 > 0){
+  if(sec01 <= 0 && sec10 <= 0 && dotSec01 <= 0 && dotSec10 <= 0 && min01 > 0){
     min01--;
     sec10 = 6;
   }
