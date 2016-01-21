@@ -1,11 +1,4 @@
-// http://garretlab.web.fc2.com/arduino/introduction/beginning_with_7segment_led/
-
-
-//const int anode_pins[] = {12, 8, 5, 3, 2, 11, 6};    // アノードに接続するArduinoのピン
 const int anode_pins[] = {7, 8, 9, 10, 11, 12, 13};    // アノードに接続するArduinoのピン
-
-//const int cathode_pins[] = {7, 9, 10, 13};  // カソードに接続するArduinoのピン
-//const int cathode_pins[] = {1, 2, 3, 4, 5, 6};  // カソードに接続するArduinoのピン
 const int cathode_pins[] = {19, 18, 17, 16, 15, 14};  // カソードに接続するArduinoのピン
 
 const int number_of_anode_pins = sizeof(anode_pins) / sizeof(anode_pins[0]);
@@ -33,16 +26,6 @@ const int digits[] = {
   0b00000000, // 8
   0b00010000, // 9
 
-//  0b00111111, // 0
-//  0b00000110, // 1
-//  0b01011011, // 2
-//  0b01001111, // 3
-//  0b01100110, // 4
-//  0b01101101, // 5
-//  0b01111101, // 6
-//  0b00100111, // 7
-//  0b01111111, // 8
-//  0b01101111, // 9
 };
 
 // 1桁の数字(n)を表示する
@@ -142,19 +125,8 @@ void loop () {
   totalTime += (min01 * 10000);
   totalTime += (min10 * 100000);
 
-//  totalTime = sec01;
-//  totalTime += (sec10 * 10);
-//  totalTime += (min01 * 100);
-//  totalTime += (min10 * 1000);
-
   set_numbers(totalTime);
 
-//  set_numbers(123456);
-//  set_numbers(888888);
-//  set_numbers(654321);
-//  set_numbers(000000);
-//  set_numbers(111111);
-//  set_numbers(1111);
   delay(10);
 //Serial.println(totalTime);
 }
